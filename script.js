@@ -16,8 +16,7 @@ let score = 20;
 Math.trunc(Math.random() * 20) + 1
  */
 // del
-document.querySelector('.question')
-  .textContent = secretNumber;
+
 // del
 
 
@@ -37,6 +36,13 @@ document.querySelector('.check')
     } else if (guessingNumber === secretNumber) {
       document.querySelector('.guess-message')
         .textContent = 'Правильно!';
+      document.querySelector('.question')
+        .textContent = secretNumber;
+      document.querySelector('body')
+        .style.backgroundColor = 'rgb(9, 250, 21)';
+      document.querySelector('.question')
+        .style.width = '50rem'
+
 
       // Too high
     } else if (guessingNumber > secretNumber) {
