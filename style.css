@@ -117,3 +117,18 @@ h1 {
 .label-score {
   margin-bottom: 2rem;
 }
+
+
+@media (max-width: 630px) {
+  main {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .right {
+    text-align: center;
+    margin: 50px 0 0 0;
+  }
+  .left {
+    margin: 0 0 100px 0;
+  }
+}

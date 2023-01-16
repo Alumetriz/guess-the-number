@@ -1,12 +1,5 @@
 'use strict';
-// const eventHandler = function() {
-//   console.log(document.querySelector('.number-input').value);
-// }
-
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
-
-let score = 20;
-let highScore = 0;
 /*
 В этом случае: Math.trunc(Math.random() * 20)
 Я буду получать значение между 0 и 19, т.к. все десятичные знаки будут откинуты.
@@ -14,6 +7,8 @@ let highScore = 0;
 Но так как мне нужно значение между 1 и 20 - то я прибавляю 1:
 Math.trunc(Math.random() * 20) + 1
  */
+let score = 20;
+let highScore = 0;
 document.querySelector('.check')
   .addEventListener('click', function() {
     const guessingNumber =
@@ -80,9 +75,6 @@ document.querySelector('.again')
     // new secret number
     secretNumber = Math.trunc(Math.random() * 20) + 1;
     score = 20;
-    // del
-    console.log(secretNumber);
-    // del
     document.querySelector('.guess-message')
       .textContent = 'Начни угадывать!';
     document.querySelector('.number-input').value = '';
@@ -91,4 +83,3 @@ document.querySelector('.again')
     document.querySelector('.question').textContent = '???'
     document.querySelector('.question').style.width = '25rem';
   })
-console.log(secretNumber);
